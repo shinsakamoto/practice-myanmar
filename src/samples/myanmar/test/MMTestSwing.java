@@ -3,49 +3,50 @@ package samples.myanmar.test;
 import java.awt.Font;
 import java.awt.GraphicsEnvironment;
 
+import javax.swing.BoxLayout;
 import javax.swing.JFrame;
-import javax.swing.JTextArea;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
+/**
+ * How to use MM font<br>
+ * Using Swing<br>
+ * <img alt="image" src="./doc-files/MMTestSwing.png">
+ * @author sakamoto
+ *
+ */
 public class MMTestSwing {
-	public static void main(String[] args) {
-		showAllFont();
-		showMyanamrFontOnGUI();
-	}
+	// Myanmar3
+	// MyanmarSangamMN
+	// NotoSansMyanmar
+	// Zawgyi-One
+	static private String[] fontNames = { "Myanmar3", "Myanmar Sangam MN", "Noto Sans Myanmar", "Zawgyi-One" };
+	static private String text = "\u1000\u102c \u1000\u102b \u102c\u1000 \u102b\u1000";
 
-	private static void showMyanamrFontOnGUI() {
-		// Myanmar3
-		// MyanmarMN
-		// MyanmarMN-Bold
-		// MyanmarSangamMN
-		// MyanmarSangamMN-Bold
-		// Zawgyi-One
-		Font font = new Font("Myanmar3", Font.PLAIN, 20);
+	public static void main(String[] args) {
+		JPanel pane = new JPanel();
+
+		for (String name : fontNames) {
+			Font font = new Font(name, Font.PLAIN, 20);
+			JLabel label = new JLabel();
+			label.setFont(font);
+			label.setText(name + " : " + text);
+			pane.add(label);
+		}
 
 		JFrame f = new JFrame();
-
 		f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		f.setSize(500, 300);
-		JTextArea area = new JTextArea();
-		area.setFont(font);
-
-		f.getContentPane().add(area);
-		String text = "\u1000\u102b , \u1000\u102c , \u102b\u1000 , u102c\u1000";
-
-		area.setText(text);
+		pane.setLayout(new BoxLayout(pane, BoxLayout.PAGE_AXIS));
+		f.setContentPane(pane);
 		f.setVisible(true);
+		showAllFont();
 	}
 
 	private static void showAllFont() {
 		GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-		Font fonts[] = ge.getAllFonts();
-		for (Font f : fonts) {
-			// Myanmar3
-			// MyanmarMN
-			// MyanmarMN-Bold
-			// MyanmarSangamMN
-			// MyanmarSangamMN-Bold
-			// Zawgyi-One
-			System.out.println(f.getName());
+		for (String name : ge.getAvailableFontFamilyNames()) {
+			System.out.println(name);
 		}
 	}
 }
