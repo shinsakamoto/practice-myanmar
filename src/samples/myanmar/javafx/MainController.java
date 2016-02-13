@@ -1,6 +1,5 @@
-package samples.myanmar;
+package samples.myanmar.javafx;
 
-import java.awt.GraphicsEnvironment;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,16 +22,16 @@ public class MainController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		for(String name : Font.getFontNames()){
+		for (String name : Font.getFontNames()) {
 			// Myanmar3
 			// Myanmar MN
 			// MyanmarMN-Bold
 			// Myanmar Sangam MN
 			// MyanmarSangamMN-Bold
 			// Zawgyi-One
-			System.out.println(name);			
+			System.out.println(name);
 		}
-		
+
 		initKeys();
 		Font f = Font.font("Myanmar Sangam MN", 16);
 		text.setFont(f);
@@ -41,7 +40,7 @@ public class MainController implements Initializable {
 			Button b = new Button(name);
 			b.setFont(f);
 			b.setOnAction((ActionEvent) -> {
-				text.insertText(0, name);
+				text.appendText(name);
 			});
 			keyPane.getChildren().add(b);
 			System.out.println(key.toString());
@@ -55,10 +54,10 @@ public class MainController implements Initializable {
 		int y = 30;
 		int width = 30;
 		int height = 30;
-		for (int i = 1; i < 150; i++) {
+		for (int i = 1; i < 160; i++) {
 			keys.add(new Key(text, x, y, width, height));
-			text+=1;
-			x=x+width+2;
+			text += 1;
+			x = x + width + 2;
 		}
 	}
 

@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="samples.myanmar.MainController">
+	fx:controller="samples.myanmar.javafx.MainController">
 	<top>
 		<TextField fx:id="text" prefHeight="69.0" prefWidth="400.0"
 			BorderPane.alignment="CENTER">

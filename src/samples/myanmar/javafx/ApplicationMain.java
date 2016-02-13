@@ -1,4 +1,4 @@
-package samples.myanmar;
+package samples.myanmar.javafx;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +8,14 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+/**
+ * MM keyboard prototype<br>
+ * Using JavaFX<br>
+ * <img alt="image" src="./doc-files/ApplicationMain.png">
+ * 
+ * @author sakamoto
+ *
+ */
 public class ApplicationMain extends Application {
     private double dragStartX;
     private double dragStartY;
