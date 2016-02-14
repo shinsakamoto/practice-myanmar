@@ -9,8 +9,11 @@ Browser can show MM unicode font correctly.
 #### Using HTML on Chrome and Firefox
 ![image](src/samples/myanmar/test/doc-files/MMTestHTML.png)
 #### Using SWT
-![image](src/samples/myanmar/test/doc-files/MMTestSwt.png)
+
 ![image](src/samples/myanmar/test/doc-files/MMTestSwt2.png)
+
+![image](src/samples/myanmar/test/doc-files/MMTestSwt.png)
+
 #### Using Java FX
 ![image](src/samples/myanmar/test/doc-files/MMTestFx.png)
 #### Using Java FX with WebView
