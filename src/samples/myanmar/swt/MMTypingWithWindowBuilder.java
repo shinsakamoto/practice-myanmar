@@ -76,7 +76,23 @@ public class MMTypingWithWindowBuilder {
 			}
 			text_4.setText(buf.toString());
 		}
+	};
 
+	private ModifyListener modifyTextListener = new ModifyListener() {
+
+		@Override
+		public void modifyText(ModifyEvent e) {
+			String t = text_5.getText();
+			try {
+				if (t.length() == 4) {
+					int i = Integer.parseInt(t, 16);
+					String s = Character.toString((char) i);
+					lblNewLabel_2.setText(s);
+				}
+			} catch (Throwable th) {
+				text_5.setText("");
+			}
+		}
 	};
 	private Text text;
 	private Button btn1;
@@ -182,6 +198,9 @@ public class MMTypingWithWindowBuilder {
 	private Label lblUnicode;
 	private Button button_1;
 	private Button button_2;
+	private Text text_5;
+	private Button btnAdd;
+	private Label lblNewLabel_2;
 
 	private void initialize() {
 		List<Control> children = new ArrayList<>(Arrays.asList(shlMyanmarTyping.getChildren()));
@@ -201,6 +220,7 @@ public class MMTypingWithWindowBuilder {
 		}
 
 		text.addModifyListener(modifyListener);
+		text_5.addModifyListener(modifyTextListener);
 
 		text_1.setEditable(false);
 		text_2.setEditable(false);
@@ -214,7 +234,7 @@ public class MMTypingWithWindowBuilder {
 	 */
 	protected void createContents() {
 		shlMyanmarTyping = new Shell();
-		shlMyanmarTyping.setSize(430, 430);
+		shlMyanmarTyping.setSize(437, 456);
 		shlMyanmarTyping.setText("Myanmar Typing");
 		shlMyanmarTyping.setLayout(new GridLayout(2, false));
 
@@ -272,18 +292,7 @@ public class MMTypingWithWindowBuilder {
 		gd_composite_1.heightHint = 73;
 		gd_composite_1.widthHint = 174;
 		composite_1.setLayoutData(gd_composite_1);
-
-		composite_3 = new Composite(composite_1, SWT.NONE);
-		composite_3.setLayout(new GridLayout(1, false));
-
-		button = new Button(composite_3, SWT.FLAT);
-		button.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent arg0) {
-				text.setText("");
-			}
-		});
-		button.setText("Clear");
+		new Label(composite_1, SWT.NONE);
 
 		composite = new Composite(composite_1, SWT.NONE);
 		composite.setLayout(new GridLayout(5, false));
@@ -510,6 +519,43 @@ public class MMTypingWithWindowBuilder {
 		btnNum0.setText(MM.ZERO);
 		new Label(composite_4, SWT.NONE);
 		new Label(composite_4, SWT.NONE);
+		new Label(composite_1, SWT.NONE);
+
+		composite_3 = new Composite(composite_1, SWT.NONE);
+		GridData gd_composite_3 = new GridData(SWT.FILL, SWT.CENTER, false, false, 3, 1);
+		gd_composite_3.widthHint = 102;
+		composite_3.setLayoutData(gd_composite_3);
+		composite_3.setLayout(new GridLayout(5, false));
+
+		button = new Button(composite_3, SWT.FLAT);
+		button.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent arg0) {
+				text.setText("");
+			}
+		});
+		button.setText("Clear");
+		new Label(composite_3, SWT.NONE);
+
+		lblNewLabel_2 = new Label(composite_3, SWT.NONE);
+		lblNewLabel_2.setAlignment(SWT.RIGHT);
+		lblNewLabel_2.setText("<empty>");
+		lblNewLabel_2.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
+
+		text_5 = new Text(composite_3, SWT.BORDER);
+
+		btnAdd = new Button(composite_3, SWT.FLAT);
+		btnAdd.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				String t = lblNewLabel_2.getText();
+				if (t.length() == 1) {
+					text.append(t);
+				}
+			}
+		});
+		btnAdd.setText("Add");
+		new Label(composite_1, SWT.NONE);
 
 		new Label(shlMyanmarTyping, SWT.NONE);
 		new Label(shlMyanmarTyping, SWT.NONE);
