@@ -2,18 +2,21 @@
 
 
 ### Rendering Testing
-SWTかブラウザでのみ正確に表示できる。
+Browser can show MM unicode font correctly.
+ブラウザでのみ正確に表示できる。
+&#x1000;&#x102c;  &#x1000;&#x102b;  &#x1014;&#x1037;&#x103A;    &#x1014;&#x103A;&#x1037;
 
+#### Using HTML on Chrome and Firefox
+![image](src/samples/myanmar/test/doc-files/MMTestHTML.png)
+#### Using SWT
+![image](src/samples/myanmar/test/doc-files/MMTestSwt.png)
+![image](src/samples/myanmar/test/doc-files/MMTestSwt2.png)
 #### Using Java FX
 ![image](src/samples/myanmar/test/doc-files/MMTestFx.png)
 #### Using Java FX with WebView
 ![image](src/samples/myanmar/test/doc-files/MMTestFxWebView.png)
-#### Using HTML on Chrome
-![image](src/samples/myanmar/test/doc-files/MMTestHTML.png)
 #### Using Swing
 ![image](src/samples/myanmar/test/doc-files/MMTestSwing.png)
-#### Using SWT
-![image](src/samples/myanmar/test/doc-files/MMTestSwt.png)
 
 
 ### Myanmar Unicode

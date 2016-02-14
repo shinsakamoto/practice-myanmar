@@ -42,6 +42,7 @@ import samples.myanmar.MMKey;
  */
 public class MMTypingWithWindowBuilder {
 
+	private String defaultText = "\u1000\u102c  \u1000\u102b  \u1014\u1037\u103A   \u1014\u103A\u1037";
 	protected Shell shlMyanmarTyping;
 	private SelectionListener listener = new SelectionListener() {
 
@@ -227,6 +228,7 @@ public class MMTypingWithWindowBuilder {
 		text_3.setEditable(false);
 		text_4.setEditable(false);
 		text.setFocus();
+		text.setText(defaultText);
 	}
 
 	/**
