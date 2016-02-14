@@ -26,6 +26,10 @@ http://unicode.org/charts/PDF/U1000.pdf
 #### Using SWT
 ![image](src/samples/myanmar/swt/doc-files/MMTyping.png)
 
+#### Using SWT with WindowBuilder
+![image](src/samples/myanmar/swt/doc-files/MMTypingWithWindowBuilder.png)
+
+
 #### Using Java FX
 ![image](src/samples/myanmar/javafx/doc-files/ApplicationMain.png)
 

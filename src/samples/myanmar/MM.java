@@ -71,4 +71,7 @@ public class MM {
 
 	public static final String SIGN_LITTLE_SECTION = "\u104A";
 	public static final String SIGN_SECTION = "\u104B";
+
+	public static final String[] COMMON = { KA, KHA, GA, GHA, NGA, CA, CHA, JA, JHA, NNYA, TA, THA, DA, DHA, NA, PA,
+			PHA, BA, BHA, MA, YA, RA, LA, WA, SA, HA, LLA, A };
 }
