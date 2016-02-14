@@ -1,6 +1,28 @@
 package samples.myanmar;
 
 public class MM {
+
+	public static String convertJavaHexString(String text) {
+		StringBuffer buf = new StringBuffer();
+		for (int i = 0; i < text.length(); i++) {
+			char ch = text.charAt(i);
+			buf.append("\\u");
+			buf.append(Integer.toHexString(ch).toUpperCase());
+		}
+		return buf.toString();
+	}
+
+	public static String convertJavaScriptHexString(String text) {
+		StringBuffer buf = new StringBuffer();
+		for (int i = 0; i < text.length(); i++) {
+			char ch = text.charAt(i);
+			buf.append("&#x");
+			buf.append(Integer.toHexString(ch).toUpperCase());
+			buf.append(";");
+		}
+		return buf.toString();
+	}
+
 	// 1000 - 1021
 	public static final String KA = "\u1000";
 	public static final String KHA = "\u1001";
