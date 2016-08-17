@@ -59,3 +59,15 @@ String normalizeStr = Normalizer2.getNFDInstance().normalize(text.getText());
 
 #### Java FX prototype
 ![image](src/samples/myanmar/javafx/doc-files/ApplicationMain.png)
+
+
+-----
+
+### Sample Font problems
+
+#### \u1014\u1031
+![image](img/1471402303.png)
+
+
+#### \u1031\u1014
+![image](img/1471402325.png)
