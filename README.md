@@ -71,3 +71,35 @@ String normalizeStr = Normalizer2.getNFDInstance().normalize(text.getText());
 
 #### \u1031\u1014
 ![image](img/1471402325.png)
+
+
+### MMWebFonts Test
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test MMWebFonts</title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel="stylesheet" href='http://mmwebfonts.comquas.com/fonts/?font=myanmar3' />
+<link rel="stylesheet" href='http://mmwebfonts.comquas.com/fonts/?font=pyidaungsu' />
+<link rel="stylesheet" href='http://mmwebfonts.comquas.com/fonts/?font=zawgyi' />
+<link rel="stylesheet" href='http://mmwebfonts.comquas.com/fonts/?font=yunghkio' />
+<style type="text/css">
+.m3 { font-family:Myanmar3; }
+.Pyidaungsu { font-family:Pyidaungsu; }
+.Zawgyi { font-family:Zawgyi-One; }
+.Yunghkio { font-family:Yunghkio; }
+</style>
+</head>
+<body>
+<h1>Test MMWebFonts</h1>
+<h5><a href="http://mmwebfonts.comquas.com/">http://mmwebfonts.comquas.com/</a></h5>
+<p>Unicode: \u1014\u1031  \u1031\u1014</p>
+<p>Myanmar3: <span class="m3">နေ  ေန</span></p>
+<p>Yunghkio: <span class="Yunghkio">နေ  ေန</span></p>
+<p>Pyidaungsu: <span class="Pyidaungsu">နေ  ေန</span></p>
+<p>Zawgyi: <span class="Zawgyi">နေ  ေန</span></p>
+</body>
+</html>
+```
+![image](img/MMWebFont.png)
