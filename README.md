@@ -1,5 +1,8 @@
 # practice-myanmar
 
+swt.jar
+http://download.eclipse.org/eclipse/downloads/drops4/R-4.6.1-201609071200/#SWT
+
 ### Myanmar Unicode
 
 http://unicode.org/charts/PDF/U1000.pdf
